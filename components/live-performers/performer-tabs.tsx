@@ -63,12 +63,6 @@ export function PerformerTabs({
     openChaturbateLink(links[linkKey])
   }
 
-  // Trouver la catégorie active
-  const getActiveCategory = () => {
-    const activeTabInfo = tabLinks.find((tab) => tab.value === activeTab)
-    return activeTabInfo ? activeTabInfo.category : "female"
-  }
-
   return (
     <Tabs defaultValue="female" className="mb-12" onValueChange={onTabChange}>
       <TabsList className="bg-black/20 mb-8 flex flex-wrap">
