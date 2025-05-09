@@ -9,7 +9,11 @@ import {
 
 export function Navbar() {
   const handleSignupClick = () => {
-    const signupLink = generateChaturbateSignupLink()
+    const signupLink = generateChaturbateSignupLink({
+      tour: "3Mc9",
+      campaign: "2AJgW",
+      track: "default",
+    })
     openChaturbateLink(signupLink)
   }
 
