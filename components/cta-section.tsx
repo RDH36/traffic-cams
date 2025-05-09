@@ -38,13 +38,6 @@ export function CTASection() {
           >
             Join Chaturbate Now
           </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="px-8 bg-white/10 text-white border-white/20 hover:bg-white/20"
-          >
-            Explore Categories
-          </Button>
         </div>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4 text-white/60 text-sm">
