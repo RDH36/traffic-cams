@@ -56,7 +56,7 @@ export function LivePerformers() {
       // Fetch female performers first (for initial display)
       const femaleData = await fetchChaturbateRooms({
         gender: "f",
-        limit: 20,
+        limit: 50,
       })
 
       if (femaleData.results.length === 0) {
@@ -86,7 +86,7 @@ export function LivePerformers() {
   const loadOtherCategories = async () => {
     try {
       // Male performers
-      const maleData = await fetchChaturbateRooms({ gender: "m", limit: 20 })
+      const maleData = await fetchChaturbateRooms({ gender: "m", limit: 50 })
       const mappedMale = mapRoomsToCardProps(
         maleData.results,
         "male",
@@ -97,7 +97,7 @@ export function LivePerformers() {
       // Couple performers
       const coupleData = await fetchChaturbateRooms({
         gender: "c",
-        limit: 20,
+        limit: 50,
       })
       const mappedCouple = mapRoomsToCardProps(
         coupleData.results,
@@ -107,7 +107,7 @@ export function LivePerformers() {
       setCouplePerformers(mappedCouple)
 
       // Trans performers
-      const transData = await fetchChaturbateRooms({ gender: "t", limit: 20 })
+      const transData = await fetchChaturbateRooms({ gender: "t", limit: 50 })
       const mappedTrans = mapRoomsToCardProps(
         transData.results,
         "trans",

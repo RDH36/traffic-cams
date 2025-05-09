@@ -17,14 +17,35 @@ interface TabInfo {
   value: string
   label: string
   linkKey: keyof ReturnType<typeof getChaturbateLinks>
+  category: string
 }
 
 const tabLinks: TabInfo[] = [
-  { value: "popular", label: "Most Watched", linkKey: "topRoom" },
-  { value: "female", label: "Female", linkKey: "topRoomFemale" },
-  { value: "male", label: "Male", linkKey: "topRoomMale" },
-  { value: "couples", label: "Couples", linkKey: "topRoomCouple" },
-  { value: "trans", label: "Trans", linkKey: "topRoomTrans" },
+  {
+    value: "popular",
+    label: "Most Watched",
+    linkKey: "topRoom",
+    category: "popular",
+  },
+  {
+    value: "female",
+    label: "Female",
+    linkKey: "topRoomFemale",
+    category: "female",
+  },
+  { value: "male", label: "Male", linkKey: "topRoomMale", category: "male" },
+  {
+    value: "couples",
+    label: "Couples",
+    linkKey: "topRoomCouple",
+    category: "couples",
+  },
+  {
+    value: "trans",
+    label: "Trans",
+    linkKey: "topRoomTrans",
+    category: "trans",
+  },
 ]
 
 export function PerformerTabs({
@@ -40,6 +61,12 @@ export function PerformerTabs({
     linkKey: keyof ReturnType<typeof getChaturbateLinks>
   ) => {
     openChaturbateLink(links[linkKey])
+  }
+
+  // Trouver la catégorie active
+  const getActiveCategory = () => {
+    const activeTabInfo = tabLinks.find((tab) => tab.value === activeTab)
+    return activeTabInfo ? activeTabInfo.category : "female"
   }
 
   return (
@@ -66,6 +93,7 @@ export function PerformerTabs({
           <PerformerGrid
             performers={performers}
             isLoading={isLoading && activeTab === tab.value}
+            category={tab.category}
           />
         </TabsContent>
       ))}
