@@ -8,9 +8,8 @@ export default function NotFound() {
         404
       </h1>
       <h2 className="text-3xl font-semibold mb-6 text-white">Page Not Found</h2>
-      <p className="text-xl mb-10 text-white/70 max-w-md">
-        Sorry, the page you're looking for has either disappeared or doesn't
-        exist.
+      <p className="text-lg mb-4">
+        La page que vous recherchez n&apos;existe pas ou a été déplacée.
       </p>
 
       <Button variant="accent" asChild className="min-w-[200px]">

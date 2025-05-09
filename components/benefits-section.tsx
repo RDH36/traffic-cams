@@ -100,7 +100,7 @@ export function BenefitsSection() {
             </h3>
             <p className="text-white/70">
               One click is all it takes to directly access your favorite
-              performer's stream on Chaturbate, without intermediaries.
+              performer&apos;s stream on Chaturbate, without intermediaries.
             </p>
           </div>
         </div>

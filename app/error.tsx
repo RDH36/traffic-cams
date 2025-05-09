@@ -20,8 +20,8 @@ export default function Error({
       <h1 className="text-4xl font-bold mb-6 text-white font-montserrat">
         Oops, an error occurred
       </h1>
-      <p className="text-xl mb-8 text-white/70">
-        Sorry for the inconvenience. We're working to fix this issue.
+      <p className="text-lg mb-4">
+        Il semble qu&apos;une erreur se soit produite.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4">

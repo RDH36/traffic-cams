@@ -206,8 +206,8 @@ export function Footer() {
             </span>
           </p>
           <p className="text-white/40 text-xs mt-4 italic">
-            "This site is not sponsored by or affiliated with Chaturbate Inc.
-            Chaturbate is a registered trademark of Chaturbate Inc."
+            &quot;This site is not sponsored by or affiliated with Chaturbate
+            Inc. Chaturbate is a registered trademark of Chaturbate Inc.&quot;
           </p>
         </div>
       </div>

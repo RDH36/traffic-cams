@@ -11,16 +11,16 @@ interface FeaturedStreamerProps extends Omit<Streamer, "username"> {
 }
 
 export function FeaturedStreamer({
-  id,
   name,
   image,
   bio,
   category,
-  viewers = 0,
+  viewers,
   isLive,
   chaturbateLink,
-  tags = [],
-  isVerified = true,
+  tags,
+  location,
+  age,
 }: FeaturedStreamerProps) {
   const handleClick = () => {
     openChaturbateLink(chaturbateLink)

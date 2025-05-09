@@ -46,6 +46,7 @@ export function LivePerformers() {
 
   useEffect(() => {
     fetchInitialData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // Fetch initial data (female performers)

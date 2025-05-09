@@ -18,7 +18,6 @@ export interface StreamerCardProps extends Omit<Streamer, "username"> {
 }
 
 export function StreamerCard({
-  id,
   name,
   image,
   previewVideo = "/videos/preview1.mp4", // Default fallback
