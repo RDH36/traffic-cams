@@ -1,0 +1,17 @@
+This folder will contain videos for the LivePulse adult streaming site.
+
+For optimal functioning, add videos in the following formats:
+
+1. /videos/hero-background.mp4 - Background video for Hero section (1920x1080px)
+2. /videos/preview1.mp4 - Preview for MelodyLove performer (640x360px)
+3. /videos/preview2.mp4 - Preview for TravelGirl performer (640x360px)
+4. /videos/preview3.mp4 - Preview for GamerBoy performer (640x360px)
+5. /videos/preview4.mp4 - Preview for ChefHottie performer (640x360px)
+6. /videos/preview5.mp4 - Preview for FitnessBabe performer (640x360px)
+7. /videos/preview6.mp4 - Preview for ArtistSexy performer (640x360px)
+8. /videos/preview7.mp4 - Preview for TechGirl performer (640x360px)
+9. /videos/preview8.mp4 - Preview for DancerQueen performer (640x360px)
+
+These videos can be replaced with your own to customize the site.
+
+IMPORTANT: All videos must represent individuals who are 18 years of age or older and must comply with 2257 requirements. 

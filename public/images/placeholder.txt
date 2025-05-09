@@ -1,0 +1,17 @@
+This folder will contain images for the LivePulse adult streaming site.
+
+For optimal functioning, add images in the following formats:
+
+1. /images/streamers/featured.jpg - Featured performer image (1920x1080px)
+2. /images/streamers/melody.jpg - MelodyLove performer image (640x360px)
+3. /images/streamers/travel.jpg - TravelGirl performer image (640x360px)
+4. /images/streamers/gaming.jpg - GamerBoy performer image (640x360px)
+5. /images/streamers/cooking.jpg - ChefHottie performer image (640x360px)
+6. /images/streamers/fitness.jpg - FitnessBabe performer image (640x360px)
+7. /images/streamers/art.jpg - ArtistSexy performer image (640x360px)
+8. /images/streamers/tech.jpg - TechGirl performer image (640x360px)
+9. /images/streamers/dance.jpg - DancerQueen performer image (640x360px)
+
+These images can be replaced with your own to customize the site.
+
+IMPORTANT: All images must represent individuals who are 18 years of age or older. 

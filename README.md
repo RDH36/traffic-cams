@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Live Pulse
+
+A modern platform for adult live streaming. Live Pulse is an elegant and immersive adult streaming website that allows users to discover performers from around the world and interact with them in real-time.
+
+## Features
+
+- 🎥 **Live Performers** - Discover adult performers broadcasting live from all over the world
+- 🔍 **Smart Filtering** - Find performers by category, popularity, or trending status
+- 💬 **Real-time Interactions** - Chat with performers and request custom content
+- 👁️ **Hover Previews** - Preview streams before joining
+- 📱 **Responsive Interface** - Enjoy the experience on all your devices
+- 🔒 **Private & Secure** - Discreet browsing with privacy protection
+
+## Technologies Used
+
+- 🧩 **Next.js 15** - Modern React framework with server-side rendering
+- 🎨 **Tailwind CSS 4** - Utility-first CSS framework
+- 🧰 **shadcn/ui** - Reusable and accessible UI components
+- 📊 **TypeScript** - Static typing for safer and more maintainable code
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- pnpm 10+
+
+### Installation
+
+1. Clone this repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/live-pulse.git
+cd live-pulse
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Start the development server
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/app` - Main application pages and layout
+- `/components` - Reusable React components
+  - `/ui` - Base UI components
+- `/lib` - Shared utilities and functions
+- `/public` - Static files (images, videos, etc.)
 
-## Deploy on Vercel
+## Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Images and Videos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For the application to function properly, add your own images and videos to the following folders:
+
+- `/public/images/streamers/` - Performer images
+- `/public/videos/` - Preview and background videos
+
+Placeholder.txt files are included in these folders with the expected filenames.
+
+## Legal Notice
+
+This platform is intended for adults 18+ only. All performers must be 18 years of age or older.
+All content must comply with 2257 regulations and appropriate age verification.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Author
+
+Created by [Your Name]
