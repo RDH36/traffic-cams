@@ -19,8 +19,6 @@ export function FeaturedStreamer({
   isLive,
   chaturbateLink,
   tags,
-  location,
-  age,
 }: FeaturedStreamerProps) {
   const handleClick = () => {
     openChaturbateLink(chaturbateLink)
