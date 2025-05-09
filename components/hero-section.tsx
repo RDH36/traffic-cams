@@ -8,7 +8,11 @@ import {
 
 export function HeroSection() {
   const handleEnterClick = () => {
-    const signupLink = generateChaturbateSignupLink()
+    const signupLink = generateChaturbateSignupLink({
+      tour: "3Mc9",
+      campaign: "2AJgW",
+      track: "default",
+    })
     openChaturbateLink(signupLink)
   }
 
