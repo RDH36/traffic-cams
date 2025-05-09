@@ -4,6 +4,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import { PerformerGrid } from "./performer-grid"
 import { StreamerCardProps } from "@/components/streamer-card"
 import { getChaturbateLinks, openChaturbateLink } from "@/lib/chaturbate-links"
+import { FORCE_SIGNUP } from "@/lib/chaturbate"
 
 interface PerformerTabsProps {
   performers: StreamerCardProps[]
@@ -32,7 +33,7 @@ export function PerformerTabs({
   activeTab,
   onTabChange,
 }: PerformerTabsProps) {
-  const links = getChaturbateLinks()
+  const links = getChaturbateLinks(FORCE_SIGNUP)
 
   // Fonction pour ouvrir directement le lien d'affiliation lorsqu'on double-clique sur un onglet
   const handleDoubleClick = (

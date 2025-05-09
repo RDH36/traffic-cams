@@ -8,6 +8,8 @@ export const DEFAULT_AFFILIATE: ChaturbateAffiliateCampaign = {
   track: "default",
 }
 
+export const FORCE_SIGNUP = true // Activer globalement la fonctionnalité de force signup
+
 // Chaturbate API configuration
 const API_BASE_URL = "https://chaturbate.com/api/public/affiliates/onlinerooms/"
 const DEFAULT_LIMIT = 100
@@ -192,7 +194,7 @@ export function mapChaturbateRoomToStreamer(
     previewImage: room.image_url_360x270,
     viewers: room.num_users,
     isLive: true,
-    chaturbateLink: generatePerformerLink(room.username),
+    chaturbateLink: generatePerformerLink(room.username, FORCE_SIGNUP),
     tags: room.tags || extractTags(room.room_subject),
     country: location,
     // Additional properties

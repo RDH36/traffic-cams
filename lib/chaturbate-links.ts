@@ -61,19 +61,22 @@ export interface ChaturbateLinks {
 
 /**
  * Génère tous les liens d'affiliation Chaturbate
+ * @param forceSignup Force l'affichage d'un formulaire d'inscription
  * @param campaign Configuration de la campagne d'affiliation
  * @returns Objet contenant tous les liens d'affiliation formatés
  */
 export function getChaturbateLinks(
+  forceSignup: boolean = true,
   campaign: ChaturbateAffiliateCampaign = DEFAULT_AFFILIATE
 ): ChaturbateLinks {
   const baseUrl = "https://chaturbate.com/in/"
   const campaignParam = `tour={tour}&campaign=${campaign.campaign}&track=${campaign.track}`
+  const signupParam = forceSignup ? "&signup_notice=1&join_modal=1" : ""
 
   // Fonction helper pour construire un lien
   const buildLink = (tour: string, additionalParams: string = ""): string => {
     const params = campaignParam.replace("{tour}", tour)
-    return `${baseUrl}?${params}${
+    return `${baseUrl}?${params}${signupParam}${
       additionalParams ? "&" + additionalParams : ""
     }`
   }
@@ -117,11 +120,21 @@ export function getChaturbateLinks(
     regionOther: buildLink("ORcp"),
 
     // Full Video Mode
-    fullVideoMode: buildLink("dM8p", "signup_notice=1"),
-    fullVideoModeFemale: buildLink("eQof", "signup_notice=1"),
-    fullVideoModeMale: buildLink("jC8b", "signup_notice=1"),
-    fullVideoModeCouple: buildLink("7Xqm", "signup_notice=1"),
-    fullVideoModeTrans: buildLink("NPcg", "signup_notice=1"),
+    fullVideoMode: forceSignup
+      ? buildLink("dM8p")
+      : buildLink("dM8p", "signup_notice=1"),
+    fullVideoModeFemale: forceSignup
+      ? buildLink("eQof")
+      : buildLink("eQof", "signup_notice=1"),
+    fullVideoModeMale: forceSignup
+      ? buildLink("jC8b")
+      : buildLink("jC8b", "signup_notice=1"),
+    fullVideoModeCouple: forceSignup
+      ? buildLink("7Xqm")
+      : buildLink("7Xqm", "signup_notice=1"),
+    fullVideoModeTrans: forceSignup
+      ? buildLink("NPcg")
+      : buildLink("NPcg", "signup_notice=1"),
 
     // Autres liens
     broadcasterSignup: buildLink("5zjT"),
@@ -141,16 +154,20 @@ export function openChaturbateLink(url: string): void {
 /**
  * Génère un lien d'affiliation Chaturbate pour un performer spécifique
  * @param username Nom d'utilisateur du performer
+ * @param forceSignup Force l'affichage d'un formulaire d'inscription
  * @param campaign Configuration de la campagne (optionnel)
  * @returns URL complète pour le performer avec l'affiliation
  */
 export function generatePerformerLink(
   username: string,
+  forceSignup: boolean = true,
   campaign: ChaturbateAffiliateCampaign = DEFAULT_AFFILIATE
 ): string {
   // Nettoyer le nom d'utilisateur (enlever les espaces, caractères spéciaux, etc.)
   const cleanUsername = username.trim().toLowerCase()
 
-  // Construire l'URL d'affiliation
-  return `https://chaturbate.com/${cleanUsername}/?tour=${campaign.tour}&campaign=${campaign.campaign}&track=${campaign.track}`
+  // Construire l'URL d'affiliation avec la notification d'inscription si demandée
+  const signupParams = forceSignup ? "&signup_notice=1&join_modal=1" : ""
+
+  return `https://chaturbate.com/${cleanUsername}/?tour=${campaign.tour}&campaign=${campaign.campaign}&track=${campaign.track}${signupParams}`
 }

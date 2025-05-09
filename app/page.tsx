@@ -6,6 +6,7 @@ import { BenefitsSection } from "@/components/benefits-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 import { generatePerformerLink } from "@/lib/chaturbate-links"
+import { FORCE_SIGNUP } from "@/lib/chaturbate"
 import { Streamer } from "@/types"
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
     category: "female",
     viewers: 3567,
     isLive: true,
-    chaturbateLink: generatePerformerLink("sophielust"),
+    chaturbateLink: generatePerformerLink("sophielust", FORCE_SIGNUP),
     tags: ["blonde", "busty", "toys", "interactive"],
     isVerified: true,
     location: "United States",

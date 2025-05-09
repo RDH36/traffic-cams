@@ -1,6 +1,7 @@
 "use client"
 
 import { getChaturbateLinks, openChaturbateLink } from "@/lib/chaturbate-links"
+import { FORCE_SIGNUP } from "@/lib/chaturbate"
 
 interface CategoryItem {
   name: string
@@ -22,7 +23,7 @@ const categories: CategoryItem[] = [
 ]
 
 export function CategoryGrid() {
-  const links = getChaturbateLinks()
+  const links = getChaturbateLinks(FORCE_SIGNUP)
 
   const handleCategoryClick = (
     linkKey: keyof ReturnType<typeof getChaturbateLinks>
